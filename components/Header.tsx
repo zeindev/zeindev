@@ -1,5 +1,8 @@
-import Image from "next/Image";
 import styled from "styled-components";
+
+const Section = styled.section`
+  padding: 0;
+`;
 
 const Name = styled.h1`
   margin: 0 0 0.2em;
@@ -15,31 +18,26 @@ const ItemContainer = styled.section`
   ${(props) => props.spaceBetween && "justify-content: space-between"};
 `;
 
-const ImageContainer = styled.div`
-  margin: 0 auto;
-  width: 10em;
-  height: 10em;
-  clip-path: circle(5em at 5em 5em);
-`;
-
 const Item = styled.h3`
   margin: 0;
   font-weight: 400;
   font-size: 1.2em;
 `;
 
-function Home({ resume }) {
+export default function Header({ resume }) {
   return (
-    <>
-      <Name>Oussama El Zein</Name>
-      <ItemContainer>
-        <Item>Welcome</Item>
-        <ImageContainer>
-          <Image src="/../public/images/oussama.jpg" height="800" width="800" />
-        </ImageContainer>
+    <Section>
+      <Name>{resume.name}</Name>
+      <ItemContainer columnAutoFlow spaceBetween>
+        <Item>{resume.position}</Item>
+        <ItemContainer columnAutoFlow>
+          <Item>{resume.phone}</Item>
+          <Item>{`${resume.city},${resume.province}`}</Item>
+          <Item>{resume.website}</Item>
+          <Item>{resume.email}</Item>
+        </ItemContainer>
       </ItemContainer>
-    </>
-  );
+    </Section>
+  )
 }
 
-export default Home;
