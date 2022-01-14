@@ -1,4 +1,3 @@
-import Image from "next/Image";
 import styled from "styled-components";
 
 const Name = styled.h1`
@@ -35,7 +34,7 @@ function Home({ resume }) {
       <ItemContainer>
         <Item>Welcome</Item>
         <ImageContainer>
-          <Image src="/../public/images/oussama.jpg" height="800" width="800" />
+          <img src="/../public/images/oussama.jpg" />
         </ImageContainer>
       </ItemContainer>
     </>
