@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import KeyRequired from "../components/KeyRequired";
 
 const Name = styled.h1`
   margin: 0 0 0.2em;
@@ -35,6 +36,7 @@ function Home({ resume }) {
         <Item>Welcome</Item>
         <ImageContainer src="/images/oussama.jpg" />
       </ItemContainer>
+      <KeyRequired />
     </>
   );
 }
