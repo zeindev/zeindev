@@ -46,23 +46,21 @@ function KeyRequired() {
     <Section>
       <SectionTitle>Valid Access Key Required</SectionTitle>
       <SectionSubTitle>Request a key</SectionSubTitle>
-      <Form name="contact" method="POST" netlify>
-        <FormItem>
-          <Label>Name:</Label>
-          <Input type="text" name="name" />
-        </FormItem>
-        <FormItem>
-          <Label>Your Email:</Label>
-          <Input type="email" name="email" />
-        </FormItem>
-        <FormItem>
-          <Label>Message:</Label>
-          <TextArea name="message" />
-        </FormItem>
-        <FormItem>
-          <Button type="submit">Send Request</Button>
-        </FormItem>
-      </Form>
+      <form name="contact" data-netlify="true">
+        <p>
+          <label>
+            Name <input type="text" name="name" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Email <input type="email" name="email" />
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
     </Section>
   );
 }
