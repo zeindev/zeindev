@@ -12,7 +12,7 @@ const SectionTitle = styled.h1`
 
 const ItemContainer = styled.section`
   display: grid;
-  grid-auto-flow: ${(props) => (props.columnAutoFlow ? "column" : "row")};
+  grid-auto-flow: row;
   gap: 0.2em;
   padding: 1em 0 0;
   ${(props) => props.spaceBetween && "justify-content: space-between"};
@@ -21,7 +21,12 @@ const ItemContainer = styled.section`
 const SubItemContainer = styled(ItemContainer)`
   gap: 0.6em;
   padding: 0;
+  grid-auto-flow: column;
   ${(props) => props.left && "justify-content: left"};
+  @media (max-width: 768px) {
+    grid-auto-flow: row;
+    gap: .2em
+  }
 `;
 
 const Item = styled.h3`
@@ -36,11 +41,11 @@ function Education({ items }) {
       <SectionTitle>Education</SectionTitle>
       {items.map((item, i) => (
         <ItemContainer key={i}>
-          <SubItemContainer columnAutoFlow spaceBetween>
+          <SubItemContainer spaceBetween>
             <Item>{item.title}</Item>
             <Item>{item.startYear + ' - ' + item.endYear}</Item>
           </SubItemContainer>
-          <SubItemContainer columnAutoFlow left>
+          <SubItemContainer left>
             <Item>{item.institution + ','}</Item>
             <Item>{item.location}</Item>
           </SubItemContainer>

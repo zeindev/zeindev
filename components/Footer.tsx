@@ -34,7 +34,7 @@ function Footer() {
         <Item>
           <GreenLeaf/>
         </Item>
-        <Item>Lovingly built with Nextjs and Contentful</Item>
+        <Item>Built with Nextjs and Contentful</Item>
       </ItemContainer>
     </Section>
   );

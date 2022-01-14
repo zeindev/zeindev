@@ -11,11 +11,26 @@ const Name = styled.h1`
   border-bottom: 2px solid black;
 `;
 
+const SectionContainer = styled.section`
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1em;
+  justify-content: space-between;
+  @media (max-width: 768px) {
+    gap: 2em;
+    grid-auto-flow: row;
+    justify-content: baseline;
+  }
+`;
+
 const ItemContainer = styled.section`
   display: grid;
-  grid-auto-flow: ${(props) => (props.columnAutoFlow ? "column" : "row")};
+  grid-auto-flow: column;
   gap: 1em;
-  ${(props) => props.spaceBetween && "justify-content: space-between"};
+  @media (max-width: 768px) {
+    grid-auto-flow: row;
+    gap: .2em;
+  }
 `;
 
 const Item = styled.h3`
@@ -28,15 +43,15 @@ export default function Header({ resume }) {
   return (
     <Section>
       <Name>{resume.name}</Name>
-      <ItemContainer columnAutoFlow spaceBetween>
+      <SectionContainer>
         <Item>{resume.position}</Item>
-        <ItemContainer columnAutoFlow>
+        <ItemContainer>
           <Item>{resume.phone}</Item>
           <Item>{`${resume.city},${resume.province}`}</Item>
           <Item>{resume.website}</Item>
           <Item>{resume.email}</Item>
         </ItemContainer>
-      </ItemContainer>
+      </SectionContainer>
     </Section>
   )
 }

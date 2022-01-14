@@ -12,11 +12,14 @@ const SectionTitle = styled.h1`
 
 const ItemContainer = styled.ul`
   display: grid;
-  grid-auto-flow: ${(props) => props.columnAutoFlow ? 'column' : 'row'};
-  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, 1fr);
   gap: .4em;
   padding: 1em 0 0;
-  ${(props) => props.spaceBetween && "justify-content: space-between"};
+  @media (max-width: 768px) {
+    grid-auto-flow: row;
+    grid-template-rows: none;
+  }
 `;
 
 const Item = styled.li`

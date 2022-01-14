@@ -26,13 +26,7 @@ const GlobalStyle = createGlobalStyle`
     font: inherit;
     vertical-align: baseline;
   }
-  /* HTML5 display-role reset for older browsers */
-  article, aside, details, figcaption, figure, 
-  footer, header, hgroup, menu, nav, section {
-    display: block;
-  }
   body {
-    line-height: 1;
     background: #d9d9c9;
   }
   ol, ul {
@@ -59,12 +53,13 @@ const SitePage = styled.section`
   background: #f9f9f9;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-`;
-
-const Wrapper = styled.section`
-  margin: 0;
-  padding: 2em;
-  background: #d9d9c9;
+  @media (max-width: 768px) {
+    padding: 1em;
+    width: 80vw;
+  }
+  @media print {
+    box-shadow: none;
+  }
 `;
 
 export default function Layout({ children }) {
