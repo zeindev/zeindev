@@ -16,7 +16,7 @@ const SectionSubTitle = styled.h3`
   font-weight: 400;
   font-size: 1.2em;
 `;
-const FormItem = styled.div`
+const FormItem = styled.fieldset`
   display: grid;
   margin: 0;
 `;
@@ -46,7 +46,7 @@ function KeyRequired() {
     <Section>
       <SectionTitle>Valid Access Key Required</SectionTitle>
       <SectionSubTitle>Request a key</SectionSubTitle>
-      <Form name="contact" method="POST" data-netlify="true">
+      <Form name="contact" method="POST" netlify>
         <FormItem>
           <Label>Name:</Label>
           <Input type="text" name="name" />
