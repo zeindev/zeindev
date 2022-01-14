@@ -36,7 +36,6 @@ function Home({ resume }) {
         <Item>Welcome</Item>
         <ImageContainer src="/images/oussama.jpg" />
       </ItemContainer>
-      <KeyRequired />
     </>
   );
 }

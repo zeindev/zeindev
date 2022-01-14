@@ -46,7 +46,8 @@ function KeyRequired() {
     <Section>
       <SectionTitle>Valid Access Key Required</SectionTitle>
       <SectionSubTitle>Request a key</SectionSubTitle>
-      <Form name="key-request" method="POST" netlify>
+      <Form name="Key Request" method="POST" data-netlify="true">
+        <input type="hidden" name="key-request" value="contact-form" />
         <FormItem>
           <Label>Name:</Label>
           <Input type="text" name="name" />
