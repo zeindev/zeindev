@@ -24,6 +24,21 @@ const GlobalStyle = createGlobalStyle`
     border: 0;
     vertical-align: baseline;
   }
+  form, input, label, textarea, button {
+    appearance: none;
+    border: none;
+    border-radius: 0;
+  }
+  input, textarea {
+    border: 1px solid black;
+  }
+  button {
+    padding: .6em;
+    color: white;
+    font-size: 1rem;
+    width: fit-content;
+    background-color: #b0b0a0;
+  }
   body {
     background: #d9d9c9;
   }

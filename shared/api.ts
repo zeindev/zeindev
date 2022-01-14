@@ -12,8 +12,11 @@ async function fetchGraphQL(query : string = '') {
   ).then((response) => response.json());
 }
 
-export async function getResume(accessToken : string) {
-  const resumeFilter = accessToken ? `where: { accessToken: "${decodeURIComponent(accessToken)}" }, ` : '';
+export async function getResume(key: string) {
+  if (!key) {
+    return
+  }
+  const resumeFilter = key ? `where: { accessKey: "${decodeURIComponent(key)}" }, ` : `where: { accessToken: "" }, `;
   const resume = await fetchGraphQL(
     `query {
       resumeCollection(${resumeFilter} limit: 1) {
@@ -58,5 +61,5 @@ export async function getResume(accessToken : string) {
       }
     }`,
   );
-  return resume.data.resumeCollection.items[0];
+  return resume.data ? resume.data.resumeCollection.items[0] : false;
 }
