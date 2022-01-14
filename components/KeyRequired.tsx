@@ -46,7 +46,7 @@ function KeyRequired() {
     <Section>
       <SectionTitle>Valid Access Key Required</SectionTitle>
       <SectionSubTitle>Request a key</SectionSubTitle>
-      <Form name="Key Request" method="POST" action="request/?success=true" data-netlify="true">
+      <Form name="Key Request" method="POST" action="request?success=true" data-netlify="true">
         <FormItem>
           <Label>Name:</Label>
           <Input type="text" name="name" />
@@ -59,9 +59,7 @@ function KeyRequired() {
           <Label>Message:</Label>
           <TextArea name="message" />
         </FormItem>
-        <FormItem>
-          <Button type="submit">Send Request</Button>
-        </FormItem>
+        <Button type="submit">Send Request</Button>
       </Form>
     </Section>
   );
