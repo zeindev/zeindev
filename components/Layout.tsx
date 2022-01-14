@@ -71,7 +71,7 @@ export default function Layout({ children }) {
   return (
     <SitePage>
       <Head>
-        <link href="http://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet"/>
+        <link href="https://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet"/>
       </Head>
       <GlobalStyle />
       <main>{children}</main>

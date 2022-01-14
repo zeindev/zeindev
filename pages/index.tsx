@@ -14,7 +14,7 @@ const ItemContainer = styled.section`
   ${(props) => props.spaceBetween && "justify-content: space-between"};
 `;
 
-const ImageContainer = styled.div`
+const ImageContainer = styled.img`
   margin: 0 auto;
   width: 10em;
   height: 10em;
@@ -33,9 +33,7 @@ function Home({ resume }) {
       <Name>Oussama El Zein</Name>
       <ItemContainer>
         <Item>Welcome</Item>
-        <ImageContainer>
-          <img src="/../public/images/oussama.jpg" />
-        </ImageContainer>
+        <ImageContainer src="/images/oussama.jpg" />
       </ItemContainer>
     </>
   );
