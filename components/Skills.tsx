@@ -12,28 +12,27 @@ const SectionTitle = styled.h1`
 
 const ItemContainer = styled.ul`
   display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, 1fr);
   gap: .4em;
-  padding: 1em 0 0;
+  padding: 1.2em 0 0;
   @media (max-width: 768px) {
-    grid-auto-flow: row;
-    grid-template-rows: none;
+    grid-template-columns: none;
   }
 `;
 
 const Item = styled.li`
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.2em;
 `;
 
-function Skills({skills}) {
+function Skills({items}) {
   return (
     <Section>
       <SectionTitle>Skills</SectionTitle>
       <ItemContainer>
-          {skills.map((skill, i) => <Item key={i}>{skill.description}</Item>)}
+          {items.map((item, i) => <Item key={i}>{item.description}</Item>)}
       </ItemContainer>
     </Section>
   );

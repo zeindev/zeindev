@@ -33,6 +33,17 @@ export async function getResume(accessToken : string) {
               description
             }
           },
+          experienceCollection {
+            items {
+              position,
+              employer,
+              location,
+              startDate,
+              endDate,
+              isCurrentPosition,
+              tasks
+            }
+          },
           educationCollection {
             items {
               type,
@@ -48,18 +59,4 @@ export async function getResume(accessToken : string) {
     }`,
   );
   return resume.data.resumeCollection.items[0];
-}
-
-export async function getResumeSkills() {
-  const skills = await fetchGraphQL(
-    `query {
-      skillCollection(limit: 20) {
-        items {
-          type,
-          description
-        }
-      }
-    }`,
-  );
-  return skills.data.skillCollection.items;
 }

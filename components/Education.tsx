@@ -31,7 +31,7 @@ const SubItemContainer = styled(ItemContainer)`
 
 const Item = styled.h3`
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.2em;
 `;
 

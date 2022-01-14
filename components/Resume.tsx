@@ -9,8 +9,8 @@ function Resume({ resume }) {
     <>
       <Header resume={resume} />
       <Summary summary={resume.summary} />
-      <Skills skills={resume.skillsCollection.items} />
-      <Experience />
+      <Skills items={resume.skillsCollection.items} />
+      <Experience items={resume.experienceCollection.items}/>
       <Education items={resume.educationCollection.items} />
     </>
   );

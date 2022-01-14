@@ -6,7 +6,7 @@ function HomePage({ resume }) {
 }
 
 export async function getServerSideProps({ query }) {
-  const resume = await getResume(query.accessToken);
+  const resume = await getResume(query.accessKey);
   return {
     props: {
       resume,
