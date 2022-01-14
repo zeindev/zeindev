@@ -14,7 +14,7 @@ const ItemContainer = styled.section`
   display: grid;
   grid-auto-flow: row;
   gap: 0.2em;
-  padding: 1em 0 0;
+  padding: 1.2em 0 0;
   ${(props) => props.spaceBetween && "justify-content: space-between"};
 `;
 
