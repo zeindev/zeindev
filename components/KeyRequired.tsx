@@ -56,7 +56,7 @@ const Button = styled.button`
   justify-self: right;
 `;
 
-function KeyRequired({ keyRequested }) {
+function KeyRequired() {
   return (
     <Section>
       <SectionTitle>Valid Access Key Required</SectionTitle>

@@ -4,14 +4,8 @@ import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 import Education from "../components/Education";
 import KeyRequired from "./KeyRequired";
-import { withRouter } from 'next/router';
-import { useEffect } from 'react';
 
-function Resume({ resume, router }) {
-  const { query } = router;
-  query.keyRequested && setTimeout(() => {
-    router.push('/');
-  }, 4000);
+function Resume({ resume }) {
   return resume ? (
     <>
       <Header resume={resume} />
@@ -21,8 +15,8 @@ function Resume({ resume, router }) {
       <Education items={resume.educationCollection.items} />
     </>
   ) : (
-      <KeyRequired keyRequested={query.keyRequested}/>
+      <KeyRequired/>
   );
 }
 
-export default withRouter(Resume);
+export default Resume;
