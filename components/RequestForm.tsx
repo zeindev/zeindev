@@ -3,8 +3,8 @@ import styles from "../styles/RequestForm.module.scss";
 function RequestForm() {
   return (
     <section className={styles["request-form"]}>
-      <h1 className={styles.title}>Valid Access Key Required</h1>
-      <h3 className={styles.subtitle}>Request a key</h3>
+      <h1 className={styles.title}>Access Key Required</h1>
+      <h3 className={styles.subtitle}>Request Form</h3>
       <form
         className={styles.form}
         name="Key Request"

@@ -8,7 +8,7 @@ function KeyRequired() {
       <h3 className={styles.subtitle}>Error</h3>
       <section className={styles['item-container']}>
         <Link href="/request">
-          <button className={styles.button}>Request an access key</button>
+          <button className={styles.button}>Request Access</button>
         </Link>
       </section>
     </section>
