@@ -1,7 +1,7 @@
-import KeyRequired from "../../components/KeyRequired";
+import RequestForm from "../../components/RequestForm";
 
 function Request() {
-  return <KeyRequired />;
+  return <RequestForm />;
 }
 
 export default Request;

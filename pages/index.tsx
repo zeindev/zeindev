@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import KeyRequired from "../components/KeyRequired";
+import KeyRequired from "../components/RequestForm";
 
 const Name = styled.h1`
   margin: 0 0 0.2em;

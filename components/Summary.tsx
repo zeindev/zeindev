@@ -23,9 +23,6 @@ const Item = styled.p`
   font-weight: 300;
   font-size: 1.2em;
   line-height: 1.2em;
-  @media (max-width: 768px) {
-    text-align: justify;
-  }
 `;
 
 function Summary({summary}) {

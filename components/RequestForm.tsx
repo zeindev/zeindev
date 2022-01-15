@@ -42,7 +42,7 @@ const Button = styled.button`
   justify-self: right;
 `;
 
-function KeyRequired() {
+function RequestForm() {
   return (
     <Section>
       <SectionTitle>Valid Access Key Required</SectionTitle>
@@ -50,7 +50,7 @@ function KeyRequired() {
       <Form
         name="Key Request"
         method="POST"
-        action="request?keyRequested=success"
+        action="success"
         data-netlify="true"
       >
         <input type="hidden" name="form-name" value="Key Request" />
@@ -72,4 +72,4 @@ function KeyRequired() {
   );
 }
 
-export default KeyRequired;
+export default RequestForm;
