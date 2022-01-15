@@ -19,7 +19,7 @@ const SectionSubTitle = styled.h3`
 
 const ItemContainer = styled.section`
   display: grid;
-  gap: .6em;
+  gap: 0.6em;
   padding: 2em 0 0;
 `;
 
@@ -56,15 +56,8 @@ const Button = styled.button`
   justify-self: right;
 `;
 
-function KeyRequired({ keyRequested }) {
-  return keyRequested ? (
-    <Section>
-      <SectionTitle>Success</SectionTitle>
-      <SectionSubTitle>Access Key Requested</SectionSubTitle>
-      <ItemContainer><Item>A key will be emailed to you when this request is processed. </Item></ItemContainer>
-      
-    </Section>
-  ) : (
+function KeyRequired() {
+  return (
     <Section>
       <SectionTitle>Valid Access Key Required</SectionTitle>
       <SectionSubTitle>Request a key</SectionSubTitle>
