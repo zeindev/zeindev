@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Section = styled.section`
   padding: 2em 0 0;
@@ -15,7 +15,7 @@ const ItemContainer = styled.section`
   grid-auto-flow: row;
   gap: 0.2em;
   padding: 1.2em 0 0;
-  ${(props) => props.spaceBetween && "justify-content: space-between"};
+  justify-content: ${(props) => props.spaceBetween && "space-between"};
 `;
 
 const SubItemContainer = styled(ItemContainer)`

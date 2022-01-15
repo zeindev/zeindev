@@ -59,7 +59,7 @@ function RequestForm() {
           <Input type="text" name="name" />
         </FormItem>
         <FormItem>
-          <Label>Your Email:</Label>
+          <Label>Email:</Label>
           <Input type="email" name="email" />
         </FormItem>
         <FormItem>

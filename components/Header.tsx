@@ -47,7 +47,7 @@ export default function Header({ resume }) {
         <Item>{resume.position}</Item>
         <ItemContainer>
           <Item>{resume.phone}</Item>
-          <Item>{`${resume.city},${resume.province}`}</Item>
+          <Item>{`${resume.city} ${resume.province}`}</Item>
           <Item>{resume.website}</Item>
           <Item>{resume.email}</Item>
         </ItemContainer>
