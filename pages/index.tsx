@@ -28,7 +28,7 @@ const Item = styled.h3`
   font-size: 1.2em;
 `;
 
-function Home({ resume }) {
+function Home() {
   return (
     <>
       <Name>Oussama El Zein</Name>

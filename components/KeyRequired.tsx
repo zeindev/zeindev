@@ -16,6 +16,21 @@ const SectionSubTitle = styled.h3`
   font-weight: 400;
   font-size: 1.2em;
 `;
+
+const ItemContainer = styled.section`
+  display: grid;
+  gap: .6em;
+  padding: 2em 0 0;
+`;
+
+const Item = styled.p`
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  text-align: center;
+`;
+
 const FormItem = styled.fieldset`
   display: grid;
   margin: 0;
@@ -41,15 +56,22 @@ const Button = styled.button`
   justify-self: right;
 `;
 
-function KeyRequired() {
-  return (
+function KeyRequired({ keyRequested }) {
+  return keyRequested ? (
+    <Section>
+      <SectionTitle>Success</SectionTitle>
+      <SectionSubTitle>Access Key Requested</SectionSubTitle>
+      <ItemContainer><Item>A key will be emailed to you when this request is processed. </Item></ItemContainer>
+      
+    </Section>
+  ) : (
     <Section>
       <SectionTitle>Valid Access Key Required</SectionTitle>
       <SectionSubTitle>Request a key</SectionSubTitle>
       <Form
         name="Key Request"
         method="POST"
-        action="request?success=true"
+        action="resume?keyRequested=true"
         data-netlify="true"
       >
         <input type="hidden" name="form-name" value="Key Request" />

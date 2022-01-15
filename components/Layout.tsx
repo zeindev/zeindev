@@ -30,14 +30,23 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 0;
   }
   input, textarea {
-    border: 1px solid black;
+    border: 1px solid lightgrey;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: .2em .6em;
+  }
+  textarea {
+    padding: .8em .6em;
+  }
+  input:focus, textarea:focus {
+    outline: 1px solid #a0a000;
   }
   button {
     padding: .6em;
     color: white;
     font-size: 1rem;
     width: fit-content;
-    background-color: #b0b0a0;
+    background-color: #a0a000;
   }
   body {
     background: #d9d9c9;
