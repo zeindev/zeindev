@@ -50,6 +50,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+  color: #262335;
   margin: 0;
   padding: 0;
   border: 0;
@@ -70,17 +71,17 @@ textarea {
   padding: .8em .6em;
 }
 input:focus, textarea:focus {
-  outline: 1px solid #a0a000;
+  outline: 1px solid #262335;
 }
 button {
   padding: .6em;
   color: white;
   font-size: 1rem;
   width: fit-content;
-  background-color: #a0a000;
+  background-color: #262335;
 }
 body {
-  background: #d9d9c9;
+  background: #d9d9c9;;
 }
 ol, ul {
   list-style: outside;
