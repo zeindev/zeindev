@@ -4,10 +4,8 @@ import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 import Education from "../components/Education";
 import KeyRequired from "./KeyRequired";
-import { withRouter } from "next/router";
 
-function Resume({ resume, router }) {
-  const { query } = router;
+function Resume({ resume }) {
   return resume ? (
     <>
       <Header resume={resume} />
@@ -21,4 +19,4 @@ function Resume({ resume, router }) {
   );
 }
 
-export default withRouter(Resume);
+export default Resume;
