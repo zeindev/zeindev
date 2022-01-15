@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import Head from "next/head";
 import Footer from "../components/Footer";
 
 const SitePage = styled.section`
@@ -20,6 +21,9 @@ const SitePage = styled.section`
 export default function Layout({ children }) {
   return (
     <SitePage>
+      <Head>
+        <style>@import url('http://fonts.cdnfonts.com/css/sofia-pro');</style>
+      </Head>
       <main>{children}</main>
       <Footer />
     </SitePage>
