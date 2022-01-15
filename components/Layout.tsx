@@ -6,7 +6,10 @@ export default function Layout({ children }) {
   return (
     <div className={styles.layout}>
       <Head>
-      <link href="http://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet"/>
+        <link
+          href="https://fonts.cdnfonts.com/css/sofia-pro"
+          rel="stylesheet"
+        />
       </Head>
       <main>{children}</main>
       <Footer />
