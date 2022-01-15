@@ -17,20 +17,6 @@ const SectionSubTitle = styled.h3`
   font-size: 1.2em;
 `;
 
-const ItemContainer = styled.section`
-  display: grid;
-  gap: 0.6em;
-  padding: 2em 0 0;
-`;
-
-const Item = styled.p`
-  margin: 0;
-  font-weight: 300;
-  font-size: 1.2em;
-  line-height: 1.2em;
-  text-align: center;
-`;
-
 const FormItem = styled.fieldset`
   display: grid;
   margin: 0;
@@ -64,7 +50,7 @@ function KeyRequired() {
       <Form
         name="Key Request"
         method="POST"
-        action="resume?keyRequested=true"
+        action="request?keyRequested=success"
         data-netlify="true"
       >
         <input type="hidden" name="form-name" value="Key Request" />
