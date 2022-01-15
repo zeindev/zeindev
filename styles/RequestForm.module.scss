@@ -1,0 +1,38 @@
+.request-form {
+  padding: 0;
+  .title {
+    margin: 0 0 0.2em;
+    font-size: 2em;
+    font-weight: 500;
+    border-bottom: 2px solid black;
+  }
+  .subtitle {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.2em;
+  }
+  .form {
+    display: grid;
+    gap: 1em;
+    padding: 2em 0 0;
+    .form-item {
+      display: grid;
+      margin: 0;
+    }
+    .label {
+      font-weight: 300;
+      font-size: 1.2em;
+      line-height: 1.2em;
+    }
+    .input {
+      height: 2rem;
+    }
+    .textarea {
+      height: 6rem;
+    }
+    .button {
+      justify-self: right;
+    }
+  }
+
+}

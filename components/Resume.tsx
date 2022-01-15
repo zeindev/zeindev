@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import ResumeHeader from "./ResumeHeader";
 import Summary from "../components/Summary";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
@@ -7,7 +7,7 @@ import KeyRequired from "../components/KeyRequired"
 function Resume({ resume }) {
   return resume ? (
     <>
-      <Header resume={resume} />
+      <ResumeHeader resume={resume} />
       <Summary summary={resume.summary} />
       <Skills items={resume.skillsCollection.items} />
       <Experience items={resume.experienceCollection.items} />

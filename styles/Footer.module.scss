@@ -1,0 +1,23 @@
+.footer {
+  padding: 2em 0 0;
+  .item-container {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.6em;
+    padding: 0;
+    justify-content: center;
+  }
+  .item {
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    align-self: center;
+  }
+  .leaf {
+    margin: 0;
+    color: green;
+    height: 1em;
+    width: 1em;
+  }
+}
