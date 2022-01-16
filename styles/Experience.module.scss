@@ -10,6 +10,10 @@
     grid-auto-flow: row;
     gap: 0.2em;
     padding: 1.2em 0 0;
+    @media print {
+      display: block;
+      break-after:auto ;
+    }
   }
   .sub-item-container {
     display: grid;
@@ -17,9 +21,11 @@
     padding: 0;
     grid-auto-flow: column;
     @media (max-width: 768px) {
+      display: grid;
       grid-auto-flow: row;
       gap: 0.2em;
     }
+
   }
   .space-between {
     justify-content: space-between;
@@ -30,6 +36,9 @@
   .item {
     font-weight: 500;
     font-size: 1.2em;
+    @media print {
+      break-before: always;
+    }
   }
   .tasks {
     display: grid;
