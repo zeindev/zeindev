@@ -8,7 +8,7 @@ function Home() {
       <h1 className={styles.name}>Oussama El Zein</h1>
       <div className={styles["item-container"]}>
         <h3 className={styles.item}>Welcome</h3>
-        <img className={styles.image} src="/images/oussama.jpg" />
+        <img className={styles.image} src="/images/oussama.jpg" alt="Oussama" />
       </div>
     </section>
   );
