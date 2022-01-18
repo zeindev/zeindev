@@ -1,6 +1,5 @@
 import styles from "../styles/Home.module.scss";
-import cn from "classnames";
-import Link from "next/link";
+import Links from "../components/Links";
 
 function Home() {
   return (
@@ -10,6 +9,7 @@ function Home() {
         <h3 className={styles.item}>Welcome</h3>
         <img className={styles.image} src="/images/oussama.jpg" alt="Oussama" />
       </div>
+      <Links/>
     </section>
   );
 }

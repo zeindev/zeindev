@@ -63,3 +63,63 @@ export async function getResume(key: string) {
   );
   return resume.data ? resume.data.resumeCollection.items[0] : false;
 }
+
+export async function getResumeV2(key: string) {
+  if (!key) {
+    return
+  }
+  const resumeFilter = key ? `where: { accessKey: "${decodeURIComponent(key)}" }, ` : `where: { accessToken: "" }, `;
+  const resume = await fetchGraphQL(
+    `query {
+      resumeV2Collection(${resumeFilter} limit: 1) {
+        items {
+          targetAudience,
+          name,
+          position,
+          phone,
+          city,
+          province,
+          website,
+          email,
+          summary,
+          skillsCollection {
+            items {
+              type,
+              description
+            }
+          },
+          experienceCollection {
+            items {
+              position,
+              employer,
+              location,
+              startDate,
+              endDate,
+              isCurrentPosition,
+              tasks
+            }
+          },
+          educationCollection {
+            items {
+              type,
+              title,
+              institution,
+              location,
+              startYear,
+              endYear
+            }
+          },
+          projectsCollection {
+            items {
+              title,
+              tasks,
+              link
+            }
+          },
+          hobbies,
+        }
+      }
+    }`,
+  );
+  return resume.data ? resume.data.resumeV2Collection.items[0] : false;
+}

@@ -15,11 +15,11 @@ function RequestForm() {
         <input type="hidden" name="form-name" value="Key Request" />
         <fieldset className={styles["form-item"]}>
           <label className={styles.label}>Name:</label>
-          <input className={styles.input} type="text" name="name" />
+          <input className={styles.input} type="text" name="name" required />
         </fieldset>
         <fieldset className={styles["form-item"]}>
           <label className={styles.label}>Email:</label>
-          <input className={styles.input} type="email" name="email" />
+          <input className={styles.input} type="email" name="email" required />
         </fieldset>
         <fieldset className={styles["form-item"]}>
           <label className={styles.label}>Message:</label>

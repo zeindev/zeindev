@@ -3,12 +3,12 @@ import ResumeV2 from "../../components/ResumeV2";
 import { getResume, getResumeV2 } from "../../shared/api";
 
 
-function ResumePage({ resume }) {
-  return <Resume resume={resume} />;
+function ResumeV2Page({ resume }) {
+  return <ResumeV2 resume={resume} />;
 }
 
 export async function getServerSideProps({ query }) {
-  const resume = await getResume(query.key) || null;
+  const resume = await getResumeV2(query.key) || null;
   return {
     props: {
       resume,
@@ -16,4 +16,4 @@ export async function getServerSideProps({ query }) {
   };
 }
 
-export default ResumePage;
+export default ResumeV2Page;
