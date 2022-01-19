@@ -1,0 +1,12 @@
+.target {
+  display: grid;
+  margin: 1rem 0;
+  grid-auto-flow: column;
+  justify-content: right;
+  .item {
+    margin: 0;
+    font-weight: 300;
+    font-size: .8em;
+    line-height: 1em;
+  }
+}

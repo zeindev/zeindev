@@ -6,6 +6,7 @@ import Experience from "../components/Experience";
 import KeyRequired from "../components/KeyRequired";
 import Projects from "../components/Projects";
 import Hobbies from "../components/Hobbies";
+import Target from "../components/Target";
 function Resume({ resume }) {
   return resume ? (
     <>
@@ -16,6 +17,7 @@ function Resume({ resume }) {
       <Experience items={resume.experienceCollection.items} />
       <Projects items={resume.projectsCollection.items} />
       <Hobbies hobbies={resume.hobbies} />
+      <Target target={resume.targetAudience} />
     </>
   ) : (
     <KeyRequired />
