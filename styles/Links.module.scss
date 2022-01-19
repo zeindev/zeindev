@@ -1,67 +1,23 @@
 .links {
-  padding: 2em 0 0;
-  .title {
-    margin: 0 0 0.2em;
-    font-size: 1.6em;
-    font-weight: 500;
-    border-bottom: 1px solid #202e32;
-  }
-  .item-container {
-    display: grid;
-    grid-auto-flow: column;
-    gap: .4em;
-    margin: 0;
-    padding: 3rem 0 0;
-    list-style: none;
-    justify-content: center;
-    @media (max-width: 800px) {
-      grid-template-columns: none;
-    }
-  }
+  padding: 0;
+  display: inline;
   .item {
+    display: inline-block;
     margin: 0;
     font-weight: 400;
     font-size: 1.2em;
-  }
-  .form {
-    display: grid;
-    grid-auto-flow: column;
-    padding: 1em 0 0;
-    justify-content: left;
-    @media (max-width: 900px) {
-      justify-content: center;
-    }
-    .form-item {
-      display: grid;
-      grid-auto-flow: column;
-      gap: .8em;
+    .github {
       margin: 0;
+      color: #202e32;
+      height: 1.5em;
+      width: 1.5em;
     }
-    .label {
-      font-weight: 300;
-      font-size: 1.2em;
-      line-height: 1.2em;
-      align-self: center;
-    }
-    .input {
-      height: 2.4rem;
-      width: 7.4rem;
-      box-sizing: border-box;
-    }
-    .button {
-      height: 2.4rem;
+    .linkedin {
+      margin: 0;
+      color: #202e32;
+      height: 1.5em;
+      width: 1.5em;
     }
   }
-  .github {
-    margin: 0;
-    color: #202e32;
-    height: 2em;
-    width: 2em;
-  }
-  .linkedin {
-    margin: 0;
-    color: #202e32;
-    height: 2em;
-    width: 2em;
-  }
+  
 }

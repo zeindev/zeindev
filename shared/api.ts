@@ -19,58 +19,6 @@ export async function getResume(key: string) {
   const resumeFilter = key ? `where: { accessKey: "${decodeURIComponent(key)}" }, ` : `where: { accessToken: "" }, `;
   const resume = await fetchGraphQL(
     `query {
-      resumeCollection(${resumeFilter} limit: 1) {
-        items {
-          targetAudience,
-          name,
-          position,
-          phone,
-          city,
-          province,
-          website,
-          email,
-          summary,
-          skillsCollection {
-            items {
-              type,
-              description
-            }
-          },
-          experienceCollection {
-            items {
-              position,
-              employer,
-              location,
-              startDate,
-              endDate,
-              isCurrentPosition,
-              tasks
-            }
-          },
-          educationCollection {
-            items {
-              type,
-              title,
-              institution,
-              location,
-              startYear,
-              endYear
-            }
-          },
-        }
-      }
-    }`,
-  );
-  return resume.data ? resume.data.resumeCollection.items[0] : false;
-}
-
-export async function getResumeV2(key: string) {
-  if (!key) {
-    return
-  }
-  const resumeFilter = key ? `where: { accessKey: "${decodeURIComponent(key)}" }, ` : `where: { accessToken: "" }, `;
-  const resume = await fetchGraphQL(
-    `query {
       resumeV2Collection(${resumeFilter} limit: 1) {
         items {
           targetAudience,
@@ -82,13 +30,13 @@ export async function getResumeV2(key: string) {
           website,
           email,
           summary,
-          skillsCollection {
+          skillsCollection(limit: 10) {
             items {
               type,
               description
             }
           },
-          experienceCollection {
+          experienceCollection(limit: 10) {
             items {
               position,
               employer,
@@ -99,7 +47,7 @@ export async function getResumeV2(key: string) {
               tasks
             }
           },
-          educationCollection {
+          educationCollection(limit: 5) {
             items {
               type,
               title,
@@ -109,11 +57,23 @@ export async function getResumeV2(key: string) {
               endYear
             }
           },
-          projectsCollection {
+          projectsCollection(limit: 5) {
             items {
               title,
               tasks,
-              link
+              link,
+              slideshow {
+                title,
+                slidesCollection { 
+                  items {
+                    description,
+                    image {
+                      url
+                    },
+                    codeSnippet
+                  }
+                }
+              }
             }
           },
           hobbies,

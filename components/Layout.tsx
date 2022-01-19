@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Footer from "../components/Footer";
 import styles from "../styles/Layout.module.scss";
 
 export default function Layout({ children }) {
@@ -12,7 +11,6 @@ export default function Layout({ children }) {
         />
       </Head>
       <main>{children}</main>
-      <Footer />
     </div>
   );
 }

@@ -1,7 +1,10 @@
 .skills {
   padding: 2em 0 0;
+  @media print {
+    padding-top: 1em;
+  }
   .title {
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 500;
     border-bottom: 1px solid #202e32;
   }
@@ -14,10 +17,17 @@
     @media (max-width: 800px) {
       grid-template-columns: none;
     }
+    @media print {
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: .6em;
+    }
   }
   .item {
     margin: 0;
     font-weight: 500;
     font-size: 1.2em;
+    @media print {
+      font-size: 1em;
+    }
   }
 }

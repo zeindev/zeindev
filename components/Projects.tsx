@@ -1,7 +1,8 @@
 import styles from "../styles/Projects.module.scss";
 import Markdown from "markdown-to-jsx";
-import { formatDate } from "../shared/utils";
+import ShowcaseSlide from "../components/ShowcaseSlide";
 import cn from "classnames";
+import Resume from "./Resume";
 
 function Projects({ items }) {
   return (
@@ -15,6 +16,7 @@ function Projects({ items }) {
           <section className={styles['sub-item-container']}>
             <Markdown className={styles.tasks}>{item.tasks}</Markdown>
           </section>
+          {item.slideshow && <ShowcaseSlide slideshow={item.slideshow}/> }
         </section>
       ))}
     </section>

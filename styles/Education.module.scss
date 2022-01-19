@@ -1,7 +1,10 @@
 .education {
   padding: 2em 0 0;
+  @media print {
+    padding-top: 1em;
+  }
   .title {
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 500;
     border-bottom: 1px solid #202e32;
   }
@@ -10,6 +13,9 @@
     grid-auto-flow: row;
     gap: 0.2em;
     padding: 1.2em 0 0;
+    @media print {
+      padding-top: .6em;
+    }
     .space-between {
       padding: 0;
       grid-auto-flow: column;
@@ -25,5 +31,8 @@
     margin: 0;
     font-weight: 300;
     font-size: 1.2em;
+    @media print {
+      font-size: 1em;
+    }
   }
 }

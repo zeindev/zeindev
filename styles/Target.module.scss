@@ -1,12 +1,16 @@
 .target {
   display: grid;
-  margin: 1rem 0;
-  grid-auto-flow: column;
-  justify-content: right;
+  gap: .4em;
+  margin: 3rem 0 0;
+  justify-content: center;
   .item {
     margin: 0;
     font-weight: 300;
-    font-size: .8em;
+    font-size: 1em;
     line-height: 1em;
+    text-align: center;
+  }
+  .bold {
+    font-weight: 500;
   }
 }

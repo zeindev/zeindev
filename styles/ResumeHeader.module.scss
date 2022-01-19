@@ -10,7 +10,7 @@
     font-weight: 500;
     font-size: 1.2em;
     @media print {
-      font-size: 1em;
+      font-size: 1.1em;
     }
   }
   .section-container {
@@ -23,6 +23,10 @@
       grid-auto-flow: row;
       justify-content: baseline;
     }
+    @media print {
+      grid-auto-flow: column;
+      gap: .6em;
+    }
   }
   .item-container {
     display: grid;
@@ -32,13 +36,17 @@
       grid-auto-flow: row;
       gap: .2em;
     }
+    @media print {
+      grid-auto-flow: column;
+      gap: .6em;
+    }
   }
   .item {
     margin: 0;
     font-weight: 300;
     font-size: 1.2em;
-  }
-  @media print {
-    font-size: 1em;
+    @media print {
+      font-size: 1.1em;
+    }
   }
 }

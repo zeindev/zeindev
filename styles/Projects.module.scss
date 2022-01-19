@@ -1,7 +1,10 @@
 .projects {
   padding: 2em 0 0;
+  @media print {
+    padding-top: 1em;
+  }
   .title {
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 500;
     border-bottom: 1px solid #202e32;
   }
@@ -11,6 +14,7 @@
     gap: 0.2em;
     padding: 1.2em 0 0;
     @media print {
+      padding-top: 0.8em;
       display: block;
       break-after:auto ;
     }
@@ -25,7 +29,10 @@
       grid-auto-flow: row;
       gap: 0.2em;
     }
-
+    @media print {
+      padding-top: 0.2em;
+      grid-auto-flow: column;
+    }
   }
   .space-between {
     justify-content: space-between;
@@ -37,6 +44,7 @@
     font-weight: 500;
     font-size: 1.2em;
     @media print {
+      font-size: 1em;
       break-before: always;
     }
   }
@@ -46,6 +54,9 @@
       font-weight: 300;
       font-size: 1.2em;
       line-height: 1.2em;
+      @media print {
+        font-size: 1em;
+      }
     }
   }
 }

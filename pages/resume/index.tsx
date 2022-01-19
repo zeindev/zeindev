@@ -1,6 +1,5 @@
 import Resume from "../../components/Resume";
-import ResumeV2 from "../../components/ResumeV2";
-import { getResume, getResumeV2 } from "../../shared/api";
+import { getResume } from "../../shared/api";
 
 
 function ResumePage({ resume }) {
