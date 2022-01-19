@@ -14,7 +14,7 @@ import styles from "../styles/ShowcaseSlide.module.scss";
 function ShowcaseSlide({ slideshow }) {
   const renderedSlides = slideshow.slidesCollection.items.map((slide, i) => {
     return (
-      <Slide index={i}>
+      <Slide key={i} index={i}>
         <div className={styles.slide}>
           <div className={styles.description}>{slide.description}</div>
           <SyntaxHighlighter language="javascript" style={materialLight}>
