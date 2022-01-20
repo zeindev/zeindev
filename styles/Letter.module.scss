@@ -1,0 +1,53 @@
+.letter {
+  .date {
+    margin: 2rem 0;
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+  .title {
+    margin: 2rem 0;
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    text-align: center;
+  }
+  .address {
+    margin: 2rem 0;
+    p {
+      font-weight: 300;
+      font-size: 1.2em;
+      line-height: 1.2em;
+      @media print {
+        font-size: 1em;
+      }
+    }
+  }
+  .greeting {
+    margin: 2rem 0;
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+  .paragraphs {
+    height: 23rem;
+    p {
+      font-weight: 300;
+      font-size: 1.2em;
+      line-height: 1.2em;
+      margin-bottom: 1em;
+      @media print {
+        font-size: 1em;
+      }
+    }
+  }
+  .signature {
+    margin: 2rem 0;
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    .signature-area {
+      height: 3rem;
+    }
+  }
+}

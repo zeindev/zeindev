@@ -83,3 +83,34 @@ export async function getResume(key: string) {
   );
   return resume.data ? resume.data.resumeV2Collection.items[0] : false;
 }
+
+export async function getLetter(key: string) {
+  if (!key) {
+    return
+  }
+  const letterFilter = key ? `where: { accessKey: "${decodeURIComponent(key)}" }, ` : `where: { accessToken: "" }, `;
+  const letter = await fetchGraphQL(
+    `query {
+      resumeV2Collection(${letterFilter} limit: 1) {
+        items {
+          targetAudience,
+          name,
+          position,
+          phone,
+          city,
+          province,
+          website,
+          email,
+          employerAddress,
+          coverLetterDate,
+          recruiterName,
+          recruiterPosition,
+          coverLetterTitle,
+          coverLetter
+        }
+      }
+    }`,
+  );
+  return letter.data ? letter.data.resumeV2Collection.items[0] : false;
+}
+
