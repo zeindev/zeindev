@@ -1,8 +1,30 @@
 .showcase {
+  background-color: #e1f1f1;
+  border-bottom-left-radius: .6rem;
+  border-bottom-right-radius: .6rem;
+  padding: .4rem 1rem;
+  .controls {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    > :first-child {
+      justify-self: left;
+    }
+    > :last-child {
+      justify-self: right;
+    }
+  }
   .slide {
-    padding: 1rem;
     width: 49rem;
     height: 24.5rem;
-    background-color: lightgrey;
+    .description {
+      font-size: .8rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+  }
+  .snippet {
+    margin: 0 !important;
+    border-radius: .6rem;
   }
 }

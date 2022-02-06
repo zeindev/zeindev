@@ -2,7 +2,27 @@ import styles from "../styles/Projects.module.scss";
 import Markdown from "markdown-to-jsx";
 import ShowcaseSlide from "../components/ShowcaseSlide";
 import cn from "classnames";
-import Resume from "./Resume";
+import { useState } from 'react';
+
+const Collapse = ({ collapsed, item }) => {
+  const [isCollapsed, setIsCollapsed] = useState(collapsed);
+  return (
+    <>
+      <button
+        className="collapse-button"
+        onClick={() => setIsCollapsed(!isCollapsed)}
+      >
+        {isCollapsed ? 'Show' : 'Hide'} content
+      </button>
+      <div
+        className={cn(styles['collapse-content'], styles[`${isCollapsed ? 'collapsed' : 'expanded'}`] )}
+        aria-expanded={isCollapsed}
+      >
+        <ShowcaseSlide slideshow={item.slideshow}/>
+      </div>
+    </>
+  );
+};
 
 function Projects({ items }) {
   return (
@@ -16,7 +36,7 @@ function Projects({ items }) {
           <section className={styles['sub-item-container']}>
             <Markdown className={styles.tasks}>{item.tasks}</Markdown>
           </section>
-          {item.slideshow && <ShowcaseSlide slideshow={item.slideshow}/> }
+          {item.slideshow && <Collapse collapsed item={item}></Collapse> }
         </section>
       ))}
     </section>

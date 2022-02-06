@@ -11,6 +11,6 @@ export function processAddress(address: string) {
   return address.split('<br>');
 }
 
-export function formatLetterDate(dateString) {
+export function formatLetterDate(dateString: string) {
   return moment(dateString).format('LL');
 }

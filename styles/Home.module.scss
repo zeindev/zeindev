@@ -1,7 +1,7 @@
 .home {
   .header {
     display: grid;
-    margin: 0 0 0.2em;
+    margin-bottom: 0.2em;
     grid-auto-flow: column;
     justify-content: space-between;
     border-bottom: 2px solid #202e32;
@@ -26,7 +26,7 @@
     font-size: 1.2em;
   }
   .image {
-    margin: 0 auto;
+    margin: 0 auto 2.4rem;
     width: 10em;
     height: 10em;
     clip-path: circle(5em at 5em 5em);

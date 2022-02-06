@@ -14,7 +14,7 @@ function ResumeAccess({router}) {
   return (
     <section className={styles.links}>
       <h3 className={styles.title}></h3>
-        <h3 className={styles.item}>Resume</h3>
+        <h3 className={styles.subtitle}>Resume</h3>
       <form className={styles.form}>
         <fieldset className={styles["form-item"]}>
           <label className={styles.label} htmlFor="name">

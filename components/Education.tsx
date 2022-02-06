@@ -1,5 +1,6 @@
 import styles from '../styles/Education.module.scss';
 import cn from 'classnames';
+
 function Education({ items }) {
   return (
     <section className={styles.education}>

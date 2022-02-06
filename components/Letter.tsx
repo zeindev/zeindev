@@ -3,7 +3,7 @@ import styles from "../styles/Letter.module.scss";
 import { processAddress, formatLetterDate } from "../shared/utils";
 
 function Letter({ letter }) {
-  const addressLines = processAddress(letter.employerAddress);
+  const addressLines: Array<String> = processAddress(letter.employerAddress);
   const address = addressLines.map((line, i) => {
     return <p key={i}>{line}</p>;
   });

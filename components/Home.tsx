@@ -2,6 +2,7 @@ import styles from "../styles/Home.module.scss";
 import Links from "../components/Links";
 import ResumeAccess from "../components/ResumeAccess";
 import Footer from "../components/Footer";
+
 function Home() {
   return (
     <section className={styles.home}>

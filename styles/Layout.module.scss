@@ -15,4 +15,14 @@
     background: #ffffff;
     box-shadow: none;
   }
+  .bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-color: #576574;
+    background-image: linear-gradient(315deg, #c2b6b6 0%, #576574 74%);
+  }
 }

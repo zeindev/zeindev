@@ -1,24 +1,14 @@
 import styles from "../styles/Links.module.scss";
 import Link from "next/link";
 import { Github, LinkedinSquare } from "@styled-icons/boxicons-logos";
-import { useState } from "react";
-import { withRouter } from "next/router";
 
-function Links({ router }) {
-  const [key, setKey] = useState("");
-  const handleChange = (e) => {
-    setKey(e.target.value);
-  };
-  const handleClick = (e) => {
-    e.preventDefault();
-    router.push(`/resumev2?key=${key}`);
-  };
+function Links() {
   return (
     <ul className={styles.links}>
       <li className={styles.item}>
         <Link href="https://linkedin.com/in/oussama-el-zein" passHref>
           <a>
-            <LinkedinSquare className={styles.github} />
+            <LinkedinSquare className={styles.linkedin} />
           </a>
         </Link>
       </li>
@@ -33,4 +23,4 @@ function Links({ router }) {
   );
 }
 
-export default withRouter(Links);
+export default Links;

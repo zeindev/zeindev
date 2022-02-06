@@ -10,7 +10,10 @@ export default function Layout({ children }) {
           rel="stylesheet"
         />
       </Head>
-      <main>{children}</main>
+      <main>
+        <div className={styles.bg}/>
+        {children}
+      </main>
     </div>
   );
 }
