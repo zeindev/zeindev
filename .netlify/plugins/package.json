@@ -6,6 +6,8 @@
   "author": "Netlify",
   "license": "MIT",
   "dependencies": {
-    "@netlify/plugin-nextjs": "4.2.0"
+    "@netlify/plugin-nextjs": "4.2.0",
+    "node-fetch": "^3.2.0",
+    "simple-get": "^4.0.1"
   }
 }
